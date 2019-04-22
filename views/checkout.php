@@ -128,13 +128,32 @@ require 'header.php';
                 <label style="display:none" id="zonecHH" for="c_country" class="text-black">Zone <span class="text-danger">*</span></label>
                 <select name="zoneCH" id="c_country" class="form-control" style="display:none" >
                   <option value="Ariana">Ariana</option>
-                  <option value="Grand Tunis">Grand Tunis</option>
+                  <option value="Beja">Beja</option>
+                  <option value="Ben Arous">Ben Arous</option>
                   <option value="Bizerte">Bizerte</option>
+                  <option value="Gabes">Gabes</option>
+                  <option value="Gafsa">Gafsa</option>
+                  <option value="Jendouba">Jendouba</option>
+                  <option value="Kairouan">Kairouan</option>
+                  <option value="Kasserine">Kasserine</option>
+                  <option value="Kebili">Kebili</option>
+                  <option value="Le Kef">Le Kef</option>
+                  <option value="Manubah">Manubah</option>
+                  <option value="Medenine">Medenine</option>
+                  <option value="Monastir">Monastir</option>
+                  <option value="Sfax">Sfax</option>
+                  <option value="Sidi Bou Zid">Sidi Bou Zid</option>
+                  <option value="Siliana">Siliana</option>
+                  <option value="Tataouine">Tataouine</option>
+                  <option value="Tozeur">Tozeur</option>
+                  <option value="Zaghouan">Zaghouan</option>
+
+                  <option value="Tunis">Tunis</option>
+
                   <option value="Nabeul">Nabeul</option>
                   <option value="Sousse">Sousse</option>
                   <option value="Mahdia">Mahdia</option>
-                  <option value="Kerkennah">Kerkennah</option>
-                  <option value="Grombalia">Grombalia</option>
+            
                   <option value="Autre">Autre</option>
 
 
