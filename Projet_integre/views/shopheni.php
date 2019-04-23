@@ -69,7 +69,8 @@ include "D:/wamp64/www/Projet_integre/core/ProduitService.php";
                                         $sth = $db->query($sql);
                                         $result=mysqli_fetch_array($sth);
                                         echo '<img width="150" height="150" src="data:image/jpeg;base64,'.base64_encode( $prod['image'] ).'"/>';
-                                        ?></a>                                </figure>
+                                        ?></a>
+                                      </figure>
                                 <div class="block-4-text p-4">
                                     <h3><a href="plusdetails.php?id=<?php echo $prod['id'];?>"><?php echo $prod['nom']; ?> </a></h3>
                                     <p class="mb-0">click pour plus de details</p>

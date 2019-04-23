@@ -62,7 +62,20 @@ $_SESSION['singleShop']=0;
                   <tr>
 
                     <td class="product-thumbnail">
-                      <img src="<?php echo $p['ID_PRO']; ?>.jpg" alt="Image" class="img-fluid">
+                      <!-- <img src="<?php// echo $p['ID_PRO']; ?>.jpg" alt="Image" class="img-fluid"> -->
+                      <figure class="block-4-image">
+                          <a><div class="zoom"><?php
+                              $id =$p['ID_PRO'];
+                              $db = mysqli_connect("localhost","root","","projet"); //keep your db name
+                              $sql = "SELECT * FROM produit where id =$id ";
+                              $sth = $db->query($sql);
+                              $result=mysqli_fetch_array($sth);
+                              echo '<img width="150" height="150" src="data:image/jpeg;base64,'.base64_encode( $p['image'] ).'"/>';
+                              ?></a>
+                            </figure>
+
+
+
                     </td>
                     <td class="product-name">
                       <h2 class="h5 text-black"><?php echo $p['nom']; ?></h2>

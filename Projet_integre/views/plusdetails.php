@@ -26,8 +26,11 @@ if(isset($_GET['id']))
                     $sql = "SELECT * FROM produit where id =$id ";
                     $sth = $db->query($sql);
                     $result=mysqli_fetch_array($sth);
-                    echo '<img width="300" height="300" src="data:image/jpeg;base64,'.base64_encode( $p['image'] ).'"/>';
-                    ?></a>             </div>
+                    echo '<img alt="Image" class="img-fluid" src="data:image/jpeg;base64,'.base64_encode( $p['image'] ).'"/>';
+                    ?></a>
+                   </div>
+                 </div>
+
             <div class="col-md-6">
                 <h2 class="text-black"><?php echo $p['nom']; ?></h2>
                 <p class="text-black"><?php echo $p['marque']; ?></p>
@@ -60,7 +63,7 @@ if(isset($_GET['id']))
 
                         <p><a href="shopheni.php" class="buy-now btn btn-sm btn-primary">Shop</a></p>
 
-                    </form> --?>
+                    </form> 
                 </div>
             </div>
         </div>

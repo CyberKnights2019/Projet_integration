@@ -24,7 +24,7 @@ if (isset($_POST['qte'])){
 	else {echo"<script> alert('Produit est deja dans votre panier')</script> " ;}
 
 		if($ss==1 and $cart==0 )
-		{$link="Location: shopheni.php?id=".$id_pro;}
+		{$link="Location: plusdetails.php?id=".$id_pro;}
 		else { $link="Location: cart.php"; }
 
 		header($link);

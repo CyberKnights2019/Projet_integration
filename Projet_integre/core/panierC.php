@@ -72,7 +72,7 @@ class PanierC{
 
 	function afficherProduits(){
 		//$sql="SElECT * From employe e inner join formationphp.employe a on e.cin= a.cin";
-		$sql="SElECT p.ID_PRO ,nom , prix , QTE From paniers p inner join produits pr on p.ID_PRO= pr.ID_PRO where ID_P= 0";
+		$sql="SElECT p.ID_PRO ,nom , prix , QTE, image From paniers p inner join produit pr on p.ID_PRO= pr.id where ID_P= 0";
 		$db = config::getConnexion();
 		try{
 		$liste=$db->query($sql);
@@ -117,7 +117,7 @@ class PanierC{
 	}
 
     function Total(){
-		$sql="select  sum(produits.prix*paniers.QTE) prix from produits right join paniers on produits.id_PRO= paniers.id_pro where ID_P= 0 ";
+		$sql="select  sum(produit.prix*paniers.QTE) prix from produit right join paniers on produit.id= paniers.id_pro where ID_P= 0 ";
 		$db = config::getConnexion();
 
 		try{
@@ -149,7 +149,7 @@ class PanierC{
 
 		function afficherPaniers($id){
 		//$sql="SElECT * From employe e inner join formationphp.employe a on e.cin= a.cin";
-		$sql="SElECT p.ID_PRO ,nom , prix , QTE From paniers p inner join produits pr on p.ID_PRO= pr.ID_PRO where ID_P= :id";
+		$sql="SElECT p.ID_PRO ,nom , prix , image, QTE From paniers p inner join produit pr on p.ID_PRO= pr.id where ID_P= :id";
 		$db = config::getConnexion();
 		try{
 		$req=$db->prepare($sql);
